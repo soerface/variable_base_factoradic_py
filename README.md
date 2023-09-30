@@ -1,4 +1,4 @@
-# Variable-base Factoadic numbers
+# Variable-base Factoradic numbers
 
 Implementation of https://xkcd.com/2835/
 

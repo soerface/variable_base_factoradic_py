@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "variable-base-factoradic"
-version = "1.0.1"
+version = "1.0.2"
 description = "Python implementation of Randall Munroe's variable base factoradic number system: https://xkcd.com/2835/"
 authors = ["Soeren Wegener <wegener92@gmail.com>"]
 readme = "README.md"
