@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: poetry install
       - name: Lint with pylint
-        run: poetry run pylint src
+        run: poetry run pylint variable_base_factoradic
 
   build:
 
@@ -34,9 +34,6 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.9", "3.10", "3.11"]
-
-    env:
-      PYTHONPATH: ${{ github.workspace }}/src
 
     steps:
       - uses: actions/checkout@v3

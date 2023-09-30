@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "variable-base-factoradic"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Soeren Wegener <wegener92@gmail.com>"]
 readme = "README.md"
-packages = [{include = "src"}]
+packages = [{include = "variable_base_factoradic"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
