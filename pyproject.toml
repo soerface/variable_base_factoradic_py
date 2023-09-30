@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Soeren Wegener <wegener92@gmail.com>"]
 readme = "README.md"
-packages = [{include = "variable_base_factoradic"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"

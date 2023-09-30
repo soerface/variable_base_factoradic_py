@@ -1,3 +1,7 @@
+"""
+Implementation of https://xkcd.com/2835/
+"""
+
 from typing import Union
 from logging import getLogger
 from math import factorial
@@ -7,8 +11,8 @@ logger = getLogger(__name__)
 
 def convert(n: Union[str, int]):
     """
-    Converts either a number to a factoradic string or a factoradic string to a number, based on the rules
-    outlined in https://xkcd.com/2835/
+    Converts either a number to a factoradic string or a factoradic string to a number,
+    based on the rules outlined in https://xkcd.com/2835/
     """
     if isinstance(n, int):
         logger.debug("Converting %i to factoradic", n)
@@ -43,8 +47,8 @@ def _from_factoradic(n: str) -> int:
             raise ValueError("Numbers larger than 3628799 are simply illegal")
         try:
             return int(digit, base=base) * factorial(base-1)
-        except ValueError as e:
+        except ValueError as err:
             raise ValueError(
-                f"Invalid input: Digit at position {base - 2} must be in base {base}") from e
+                f"Invalid input: Digit at position {base - 2} must be in base {base}") from err
 
-    return sum([to_factoradic_digit(d, i) for i, d in components])
+    return sum((to_factoradic_digit(d, i) for i, d in components))
