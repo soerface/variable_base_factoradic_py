@@ -2,6 +2,14 @@
 
 Implementation of https://xkcd.com/2835/
 
+## Installation
+
+https://pypi.org/project/variable-base-factoradic/
+
+```bash
+pip install variable-base-factoradic
+```
+
 ## Usage
 
 ```python
