@@ -3,6 +3,7 @@ from variable_base_factoradic import convert
 
 
 @pytest.mark.parametrize("base_10, factoradic", [
+    (0, "0"),
     (1, "1"),
     (2, "10"),
     (3, "11"),

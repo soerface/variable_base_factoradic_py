@@ -1,12 +1,13 @@
 [tool.poetry]
 name = "variable-base-factoradic"
-version = "1.0.2"
-description = "Python implementation of Randall Munroe's variable base factoradic number system: https://xkcd.com/2835/"
+version = "1.1"
+description = "Python implementation of Randall Munroe'xs variable base factoradic number system: https://xkcd.com/2835/"
 authors = ["Soeren Wegener <wegener92@gmail.com>"]
 readme = "README.md"
 packages = [{include = "variable_base_factoradic"}]
 license = "MIT"
 repository = "https://github.com/soerface/variable_base_factoradic_py"
+homepage = "https://soerface.github.io/variable_base_factoradic/"
 
 
 [tool.poetry.dependencies]

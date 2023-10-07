@@ -28,6 +28,8 @@ def _to_factoradic(n: int) -> str:
     Convert a number to a factoradic string
     """
     components = []
+    if n == 0:
+        return "0"
     while n > 0:
         base = len(components) + 2
         if base > 10:
