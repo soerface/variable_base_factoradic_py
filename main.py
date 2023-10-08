@@ -1,16 +1,13 @@
-from variable_base_factoradic import convert
+from variable_base_factoradic import to_factoradic
 import logging
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(levelname)s: %(message)s")
 
 
 def main():
-    inp = "1010"
-    res = convert(inp)
-    if isinstance(res, int):
-        print(f"Converting {inp} from factoradic: {res}")
-    else:
-        print(f"Converting {inp} to factoradic: {res}")
+    inp = 101
+    res = to_factoradic(inp)
+    print(f"Converting {inp} to factoradic: {res}")
 
 
 if __name__ == "__main__":

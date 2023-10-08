@@ -5,6 +5,7 @@ Implementation of https://xkcd.com/2835/
 from typing import Union
 from logging import getLogger
 from math import factorial
+import warnings
 
 logger = getLogger(__name__)
 
@@ -13,17 +14,23 @@ def convert(n: Union[str, int]):
     """
     Converts either a number to a factoradic string or a factoradic string to a number,
     based on the rules outlined in https://xkcd.com/2835/
+
+    Deprecated, will be removed in 2.0: Use to_factoradic or from_factoradic instead
     """
+    warnings.warn(
+        "This function is deprecated and will be dropped in 2.0. "
+        "Use to_factoradic or from_factoradic instead", DeprecationWarning
+    )
     if isinstance(n, int):
         logger.debug("Converting %i to factoradic", n)
-        return _to_factoradic(n)
+        return to_factoradic(n)
     if isinstance(n, str):
         logger.debug("Converting %s from factoradic", n)
-        return _from_factoradic(n)
+        return from_factoradic(n)
     raise TypeError(f"Expected int or str, got {type(n)}")
 
 
-def _to_factoradic(n: int) -> str:
+def to_factoradic(n: int) -> str:
     """
     Convert a number to a factoradic string
     """
@@ -40,7 +47,10 @@ def _to_factoradic(n: int) -> str:
     return "".join([str(d) for d in components[::-1]])
 
 
-def _from_factoradic(n: str) -> int:
+def from_factoradic(n: str) -> int:
+    """
+    Convert a factoradic string to a number
+    """
     components = [(i+2, d) for i, d in enumerate(n[::-1])]
     logger.debug("Components: %s", components)
 
