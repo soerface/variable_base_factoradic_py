@@ -13,13 +13,13 @@ pip install variable-base-factoradic
 ## Usage
 
 ```python
-from variable_base_factoradic import convert
+from variable_base_factoradic import from_factoradic, to_factoradic
 
 # Convert from decimal to factoradic
-convert(5038)
+to_factoradic(5038)
 # Out: "654320"
 
 # Convert from factoradic to decimal
-convert("654320")
+from_factoradic("654320")
 # Out: 5038
 ```
